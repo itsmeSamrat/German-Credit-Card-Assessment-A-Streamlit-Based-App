@@ -1,5 +1,5 @@
 # importing necessary libraries
-import pickle
+import pickle5 as pickle
 import pandas as pd
 import streamlit as st
 
@@ -22,7 +22,7 @@ def predict(
     Purpose
 ):
     # categorical data handling
-    load_encoding = pickle.load(open('OneHotEncoding.pkl', 'rb'))
+    load_encoding = pickle.load(open('streamlit/OneHotEncoding.pkl', 'rb'))
 
     categorical_data = pd.DataFrame(dict(Sex=[Sex],
                                          Housing=[Housing],
@@ -55,7 +55,7 @@ def predict(
         numeric_data[j] = numeric_data[j]**(1/5)
 
     scaled = pickle.load(
-        open("final_trained_scaler_model.pkl", "rb"))  # scaling
+        open("streamlit/final_trained_scaler_model.pkl", "rb"))  # scaling
     num_data = scaled.transform(numeric_data)
 
     numeric_data = pd.DataFrame(
@@ -65,7 +65,7 @@ def predict(
     data = enc_data.join(numeric_data)
 
     # loading the model
-    rf_model = pickle.load(open("final_trained_model.pkl", "rb"))
+    rf_model = pickle.load(open("streamlit/final_trained_model.pkl", "rb"))
     predict = rf_model.predict(data)
     predict = predict[0]
 
