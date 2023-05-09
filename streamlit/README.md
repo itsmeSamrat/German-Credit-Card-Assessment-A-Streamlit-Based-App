@@ -7,7 +7,7 @@
 
 ## Description
 
-Test the [APP](https://itsmesamrat-german-credit-card-assessment-a-streamlitapp-9p457k.streamlit.app/).
+Check out the [APP](https://itsmesamrat-german-credit-card-assessment-a-streamlitapp-9p457k.streamlit.app/).
 
 Streamlit is a great choice for anyone who wants to develop web applications quickly and efficiently. Its simplicity, flexibility, and ease of use make it an excellent choice for both beginners and experienced developers alike with its intuitive API and rich ecosystem.
 
